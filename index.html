@@ -152,23 +152,24 @@
 </header>
 
 <div class="container">
-  <p>Shattered Unblocker is an exploit that allows ChromeOS users to kill managed extensions after the LTMEAT patch. It remains unpatched in all new ChromeOS versions as of December 2024.</p>
+  <p>Shattered Unblocker is a website that allows ChromeOS users to kill managed extensions after the LTMEAT patch. It remains unpatched in all new ChromeOS versions as of December 2024.</p>
 <p> If you want to unblock everything select Lightspeed Filter Agent. If you want to not allow your teacher to control your computer select Lightspeed Classroom.</p>
+<p> Shattered Unblocker kills extensions by "shattering" them. when you start this process your computer will lag very hard but once yours done it will stop lagging</p>
   <label for="iframeSelect" id="labelForIframeSelect">Select extension:</label>
   <select id="iframeSelect">
   </select>
-  <button onclick="warning();" id="hangButton">Hang Extension!</button>
+  <button onclick="warning();" id="hangButton">Shatter Extension!</button>
   <button id="killButton" onclick="openExtensionPopup();">Kill Extension!</button>
 </div>
 
 <div class="overlay" id="overlay">
   <div class="spinner"></div>
-  Hanging... (This will take about 1 minute)
+  Shattering... (This will take about 1 minute)
 </div>
 <div id="killExtensionText"></div>
 
 <footer>
-  <p> Find Our Other Products <a href="https://sites.google.com/view/shatterednetwork/">Here</a></p>
+  <p> Find Our Other Products <a href="https://sites.google.com/view/shatterednetwork/">Here</a> | Part Of Shattered Network which includes Shattered Realms</p>
 </footer>
 
 <script>
@@ -277,7 +278,7 @@
       var extensionId = selectedSrc.substring(selectedSrc.indexOf("//") + 2, selectedSrc.indexOf("/", selectedSrc.indexOf("//") + 2));
       var extensionURL = "chrome-extension://" + extensionId;
       var killExtensionText = document.getElementById("killExtensionText");
-      killExtensionText.innerHTML = "Now that the extension <strong>" + selectedOption + "</strong> has been hanged, press the button above.";
+      killExtensionText.innerHTML = "Now that the extension <strong>" + selectedOption + "</strong> has been shattered, press the button above.";
       setTimeout(function() {
         overlay.style.display = "none";
         killExtensionText.style.display = "block";
